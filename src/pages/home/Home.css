@@ -1,0 +1,169 @@
+/* Asosiy konteyner */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #f8fafc;
+}
+
+/* Sarlavha qismi */
+.hero-section {
+  text-align: center;
+  padding: 60px 20px 40px;
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid sistemasi */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+/* Karta dizayni (Premium Glassmorphism) */
+.category-card {
+  position: relative;
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.8);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon stili */
+.card-icon {
+  font-size: 2rem;
+  background: rgba(56, 189, 248, 0.1);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Matnlar */
+.card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #f1f5f9;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+/* Arrow (Ko'rsatkich) */
+.arrow-icon {
+  margin-left: auto;
+  font-size: 1.5rem;
+  color: #38bdf8;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover .arrow-icon {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* MEDIA SO'ROVLAR (Telefonlar uchun) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 10px 30px;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section p {
+    font-size: 0.95rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr; /* Telefonlarda bitta ustun */
+    gap: 15px;
+  }
+
+  .category-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .card-content h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Kichik telefonlar uchun qo'shimcha */
+@media (max-width: 380px) {
+  .category-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .arrow-icon {
+    display: none; /* Juda kichik ekranlarda strelkani yashiramiz */
+  }
+
+  .card-icon {
+    margin: 0 auto;
+  }
+}

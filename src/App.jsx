@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
 import QuizPage from "./pages/quizpage/QuizPage";
 import "./App.css"
+import AdminPage from './pages/admin/Admin';
 
 function App() {
   return (
@@ -15,10 +16,11 @@ function App() {
         <Routes>
           {/* Bosh sahifa */}
           <Route path="/" element={<Home />} />
-          
+          <Route path="/admin" element={<AdminPage />} />
+
           {/* Quiz sahifasi ID bilan */}
           <Route path="/quiz/:id" element={<QuizPage />} />
-          
+
           {/* Agar noto'g'ri URL kiritilsa (404 sahifa o'rniga Homega qaytaradi) */}
           <Route path="*" element={<Home />} />
         </Routes>

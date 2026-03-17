@@ -18,21 +18,21 @@ function AdminPage() {
         <div className="profile-details">
           <div className="detail-item">
             <span className="label">Ism:</span>
-            <span className="value">Muhammadamin G'ulomov</span>
+            <span className="value">????????</span>
           </div>
           
           <div className="detail-item">
             <span className="label">Telefon:</span>
-            <span className="value">+998 20 000 12 10</span>
+            <span className="value">????????</span>
           </div>
         </div>
 
         <div className="action-buttons">
-          <a href="https://t.me/M_dewolper" target="_blank" rel="noreferrer" className="btn telegram-btn">
+          <a href="https://t.me/" target="_blank" rel="noreferrer" className="btn telegram-btn">
             <span className="btn-icon">✈️</span> Telegram orqali yozish
           </a>
           
-          <a href="tel:+998200001210" className="btn phone-btn">
+          <a href="tel:+998" className="btn phone-btn">
             <span className="btn-icon">📞</span> Qo'ng'iroq qilish
           </a>
         </div>

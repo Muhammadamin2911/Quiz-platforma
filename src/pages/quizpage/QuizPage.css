@@ -348,3 +348,51 @@
     padding: 16px;
   }
 }
+
+/* Touch qurilmalarda hover/active muammosini hal qilish */
+@media (hover: none) {
+  .option-btn:hover {
+    background: rgba(51, 65, 85, 0.4) !important;   /* hover effekti o'chiriladi */
+    transform: none !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .option-btn:active {
+    transform: scale(0.98);   /* faqat bosilganda ozgina effekt */
+  }
+}
+
+/* Yoki yanada qattiqroq variant */
+.option-btn {
+  -webkit-tap-highlight-color: transparent;   /* Androidda ko'k rangli highlight ni olib tashlaydi */
+  touch-action: manipulation;                 /* double-tap zoom ni oldini oladi */
+}
+
+/* Mobil qurilmalarda "yopishib qolgan" hover ni oldini olish */
+@media (hover: none) {
+  .option-btn:hover {
+    background: rgba(51, 65, 85, 0.4) !important;
+    transform: none !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .option-btn:active {
+    /* faqat bosilayotgan paytda ozgina vizual feedback */
+    background: rgba(51, 65, 85, 0.7);
+    transform: scale(0.98);
+  }
+
+  .option-btn.correct,
+  .option-btn.wrong,
+  .option-btn.disabled {
+    /* bu holatlarda ham hover ta'sir qilmasin */
+    background: inherit !important;
+    border-color: inherit !important;
+  }
+}
+
+/* Androidda ko‘k rangli teginish highlightini olib tashlash */
+.option-btn {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
